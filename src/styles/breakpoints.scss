@@ -1,8 +1,8 @@
 $breakpoints: (
-  "phone": 425px,
-  "tablet": 768px,
-  "desktop": 1366px,
-  "LGdesktop": 1920px
+  'phone': 425px,
+  'tablet': 768px,
+  'desktop': 1366px,
+  'LGdesktop': 1920px,
 ) !default;
 
 ///
@@ -22,17 +22,17 @@ $breakpoints: (
 ///	);
 ///
 $media-expressions: (
-  "screen": "screen",
-  "print": "print",
-  "handheld": "handheld",
-  "retina2x": (
-    "(-webkit-min-device-pixel-ratio: 2)",
-    "(min-resolution: 192dpi)"
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'retina2x': (
+    '(-webkit-min-device-pixel-ratio: 2)',
+    '(min-resolution: 192dpi)',
   ),
-  "retina3x": (
-    "(-webkit-min-device-pixel-ratio: 3)",
-    "(min-resolution: 350dpi)"
-  )
+  'retina3x': (
+    '(-webkit-min-device-pixel-ratio: 3)',
+    '(min-resolution: 350dpi)',
+  ),
 ) !default;
 
 ///
@@ -59,9 +59,9 @@ $media-expressions: (
 ///	 @media (min-width: 2.1rem) {}
 ///
 $unit-intervals: (
-  "px": 1,
-  "em": 0.01,
-  "rem": 0.1
+  'px': 1,
+  'em': 0.01,
+  'rem': 0.1,
 ) !default;
 ///
 /// Generates a media query based on a list of conditions
@@ -98,11 +98,11 @@ $unit-intervals: (
   }
 
   $branches: get-query-branches($conditions);
-  $query: "";
+  $query: '';
 
   @each $branch in $branches {
     @if (str-length($query) != 0) {
-      $query: $query + ", ";
+      $query: $query + ', ';
     }
 
     $query: $query + $branch;
@@ -125,18 +125,18 @@ $unit-intervals: (
 /// @return {List | Null}
 ///
 @function get-query-branches($expressions) {
-  $result: "";
+  $result: '';
   $has-groups: false;
 
   // Getting initial snapshot and looking for groups
   @each $expression in $expressions {
     @if (str-length($result) != 0) {
-      $result: $result + " and ";
+      $result: $result + ' and ';
     }
 
-    @if (type-of($expression) == "string") {
+    @if (type-of($expression) == 'string') {
       $result: $result + $expression;
-    } @else if (type-of($expression) == "list") {
+    } @else if (type-of($expression) == 'list') {
       $result: $result + nth($expression, 1);
       $has-groups: true;
     } @else {
@@ -147,7 +147,7 @@ $unit-intervals: (
   // If we have groups, we have to create all possible combinations
   @if $has-groups {
     @each $expression in $expressions {
-      @if (type-of($expression) == "list") {
+      @if (type-of($expression) == 'list') {
         $first: nth($expression, 1);
 
         @each $member in $expression {
@@ -181,18 +181,18 @@ $unit-intervals: (
 /// @return {String | Null}
 ///
 @function parse-expression($expression) {
-  $operator: "";
-  $value: "";
-  $element: "";
-  $result: "";
+  $operator: '';
+  $value: '';
+  $element: '';
+  $result: '';
   $is-width: true;
 
-  @if (type-of($expression) != "string") {
+  @if (type-of($expression) != 'string') {
     @warn 'Expression with type `#{type-of($expression)}` detected, string expected.';
   }
 
   // Separating the operator from the rest of the expression
-  @if (str-slice($expression, 2, 2) == "=") {
+  @if (str-slice($expression, 2, 2) == '=') {
     $operator: str-slice($expression, 1, 2);
     $value: str-slice($expression, 3);
   } @else {
@@ -220,14 +220,14 @@ $unit-intervals: (
       @warn 'Unknown unit: #{$unit}';
     }
 
-    @if ($operator == ">") {
-      $element: "(min-width: #{$result + $interval})";
-    } @else if ($operator == "<") {
-      $element: "(max-width: #{$result - $interval})";
-    } @else if ($operator == ">=") {
-      $element: "(min-width: #{$result})";
-    } @else if ($operator == "<=") {
-      $element: "(max-width: #{$result})";
+    @if ($operator == '>') {
+      $element: '(min-width: #{$result + $interval})';
+    } @else if ($operator == '<') {
+      $element: '(max-width: #{$result - $interval})';
+    } @else if ($operator == '>=') {
+      $element: '(min-width: #{$result})';
+    } @else if ($operator == '<=') {
+      $element: '(max-width: #{$result})';
     } @else {
       @warn '#{$expression} is missing an operator.';
     }
@@ -274,7 +274,7 @@ $unit-intervals: (
 ///
 @function to-number($string) {
   // Matrices
-  $strings: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
   $numbers: 0 1 2 3 4 5 6 7 8 9;
 
   // Result
@@ -287,12 +287,12 @@ $unit-intervals: (
     $character: str-slice($string, $i, $i);
     $index: index($strings, $character);
 
-    @if $character == "-" {
+    @if $character == '-' {
       $minus: true;
-    } @else if $character == "." {
+    } @else if $character == '.' {
       $divider: 1;
     } @else {
-      @if type-of($index) != "number" {
+      @if type-of($index) != 'number' {
         $result: if($minus, $result * -1, $result);
         @return _length($result, str-slice($string, $i));
       }
@@ -315,12 +315,12 @@ $unit-intervals: (
 }
 
 @function _length($number, $unit) {
-  $strings: "px" "cm" "mm" "%" "ch" "pica" "in" "em" "rem" "pt" "pc" "ex" "vw"
-    "vh" "vmin" "vmax";
+  $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw'
+    'vh' 'vmin' 'vmax';
   $units: 1px 1cm 1mm 1% 1ch 1pica 1in 1em 1rem 1pt 1pc 1ex 1vw 1vh 1vmin 1vmax;
   $index: index($strings, $unit);
 
-  @if type-of($index) != "number" {
+  @if type-of($index) != 'number' {
     @warn 'Unknown unit `#{$unit}`.';
     @return false;
   }

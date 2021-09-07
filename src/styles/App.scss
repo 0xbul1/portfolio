@@ -1,0 +1,145 @@
+// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
+@import './variables.scss';
+@import './breakpoints.scss';
+
+body,
+html {
+  // visibility: hidden;
+  user-select: none;
+  background: $white;
+  overscroll-behavior: none;
+  margin: 0;
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+  @include media('<=1560px') {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @include media('<=desktop') {
+    width: 1080px;
+    min-width: 1080px;
+  }
+  @include media('<=1080px') {
+    width: 100%;
+    min-width: 100%;
+  }
+  .row {
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    @include media('<=phone') {
+      padding: 0 16px;
+    }
+  }
+  .v-center {
+    align-items: center;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  .row {
+    display: flex;
+    height: 100%;
+  }
+}
+
+// intro overlay
+.intro-overlay {
+  .top {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    width: 100%;
+    z-index: 8;
+    .overlay-top {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      @include media('<=tablet') {
+        width: 100vw;
+      }
+      &:nth-child(2) {
+        left: 33.333%;
+        @include media('<=tablet') {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        left: 66.666%;
+        @include media('<=tablet') {
+          display: none;
+        }
+      }
+    }
+  }
+  .bottom {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 8;
+    .overlay-bottom {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+      right: 66.666%;
+      @include media('<=tablet') {
+        right: 0;
+        width: 100vw;
+      }
+      &:nth-child(2) {
+        right: 33.333%;
+        @include media('<=tablet') {
+          width: 100vw;
+          top: 100%;
+          right: 0;
+        }
+      }
+      &:nth-child(3) {
+        right: 0;
+        @include media('<=tablet') {
+          width: 100vw;
+          top: 200%;
+        }
+      }
+    }
+  }
+}
+
+.App {
+  z-index: 2;
+  transform: translateY(0);
+  position: relative;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  background: $white;
+  .row {
+    display: flex;
+    align-items: center;
+  }
+}
