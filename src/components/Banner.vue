@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main {
   height: 50vh; //fallback option
   height: calc(var(--vh, 1vh) * 50);
