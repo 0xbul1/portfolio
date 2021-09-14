@@ -16,10 +16,7 @@
             <h2>{{ caseItem.title }}</h2>
           </div>
           <div class="case-image">
-            <img
-              :src="require(`../assets/${caseItem.img}.png`)"
-              :alt="caseItem.title"
-            />
+            <img :src="dynamicImport(caseItem.img)" :alt="caseItem.title" />
           </div>
         </div>
       </div>
@@ -57,8 +54,12 @@ export default {
         img: 'img3',
       },
     ];
+    const dynamicImport = (name) => {
+      return new URL(`../assets/${name}.png`, import.meta.url).href;
+    };
     return {
       caseStudies,
+      dynamicImport,
     };
   },
 };
