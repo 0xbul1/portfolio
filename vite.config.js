@@ -8,7 +8,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "./src/styles/App";`,
+        additionalData: '@import "./src/styles/variables";@import "./src/styles/breakpoints";',
       }
     }
   }

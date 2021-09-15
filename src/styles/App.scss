@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap');
 @import './variables.scss';
 @import './breakpoints.scss';
 
@@ -129,6 +129,7 @@ body {
 }
 
 .App {
+  background: red;
   z-index: 2;
   transform: translateY(0);
   position: relative;
