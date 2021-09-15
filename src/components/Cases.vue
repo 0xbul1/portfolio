@@ -26,7 +26,7 @@
 
 <script>
 import CasesPrev from '../assets/arrow-right.svg';
-import CasesNext from '../assets/arrow-right.svg';
+import CasesNext from '../assets/arrow-left.svg';
 export default {
   name: 'Cases',
   components: {
