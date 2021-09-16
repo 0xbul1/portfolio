@@ -4,14 +4,16 @@
       <div class="row">
         <h2>
           <div class="line">
-            <span>Creating unique brands is</span>
+            <!-- <span>Creating unique brands is</span> -->
+            <span>I don't have to, but I have to</span>
           </div>
           <div class="line">
-            <span>what we do.</span>
+            <!-- <span>what we do.</span> -->
+            <span>Sorry, I'm mjj ：）</span>
           </div>
         </h2>
         <div class="btn-row">
-          <a href="/"> More about us <RightArrow /> </a>
+          <a href="/"> More about me <RightArrow /> </a>
         </div>
       </div>
     </div>
