@@ -3,14 +3,17 @@
   <div class="App">
     <router-view :dimensions="dimensions"></router-view>
   </div>
+  <Navigation />
 </template>
 <script>
 import { onMounted, onUnmounted, reactive, ref } from 'vue';
 import { debounce } from './utils';
 import Header from './components/Header.vue';
+import Navigation from './components/Navigation.vue';
 export default {
   components: {
     Header,
+    Navigation,
   },
   setup() {
     const dimensions = {
@@ -26,7 +29,6 @@ export default {
     const debouncedHandleResize = debounce(() => {
       dimensions.height = window.innerHeight;
       dimensions.width = window.innerWidth;
-      console.log(dimensions);
     }, 1000);
 
     return {
