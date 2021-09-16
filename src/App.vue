@@ -16,10 +16,10 @@ export default {
     Navigation,
   },
   setup() {
-    const dimensions = {
+    const dimensions = reactive({
       height: window.innerHeight,
       width: window.innerWidth,
-    };
+    });
     onMounted(() => {
       window.addEventListener('resize', debouncedHandleResize);
     });

@@ -19,19 +19,28 @@ export default {
     Cases,
   },
   props: {
-    dimensions: Object,
+    dimensions: {
+      type: Object,
+    },
   },
   setup(props) {
     const animationComplete = ref(false);
     const completeAnimation = () => {
       animationComplete.value = true;
     };
-    onMounted(() => {
-      completeAnimation();
-    });
-    homeAnimation(completeAnimation);
-    const vh = props.dimensions.height * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // onMounted(() => {
+    //   completeAnimation();
+    // });
+
+    watch(
+      () => props.dimensions,
+      () => {
+        homeAnimation(completeAnimation);
+        const vh = props.dimensions.height * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      },
+      { deep: true },
+    );
     return {
       animationComplete,
     };
