@@ -6,11 +6,14 @@
           <a to="/" exact> AGENCY </a>
         </div>
         <div class="nav-toggle">
-          <div class="hamburger-menu">
+          <div class="hamburger-menu" @click="menuState.menuOpened = true">
             <span></span>
             <span></span>
           </div>
-          <div class="hamburger-menu-close">
+          <div
+            class="hamburger-menu-close"
+            @click="menuState.menuOpened = false"
+          >
             <UpArrow />
           </div>
         </div>
@@ -20,11 +23,36 @@
 </template>
 
 <script>
+import { reactive, watch, toRef } from 'vue';
+import { openMenu, closeMenu } from '../animations';
 import UpArrow from '../assets/up-arrow-circle.svg';
 export default {
   name: 'Header',
   components: {
     UpArrow,
+  },
+  props: {
+    dimensions: {
+      type: Object,
+    },
+  },
+  setup(props) {
+    const menuState = reactive({
+      menuOpened: false,
+    });
+    watch(
+      () => menuState.menuOpened,
+      (status) => {
+        if (status === true) {
+          openMenu(props.dimensions.width);
+        } else {
+          closeMenu();
+        }
+      },
+    );
+    return {
+      menuState,
+    };
   },
 };
 </script>

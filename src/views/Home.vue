@@ -28,9 +28,9 @@ export default {
     const completeAnimation = () => {
       animationComplete.value = true;
     };
-    // onMounted(() => {
-    //   completeAnimation();
-    // });
+    onMounted(() => {
+      completeAnimation();
+    });
 
     watch(
       () => props.dimensions,
