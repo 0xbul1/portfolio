@@ -6,6 +6,7 @@
   <Navigation />
 </template>
 <script>
+import { gsap } from 'gsap';
 import { onMounted, onUnmounted, reactive, ref } from 'vue';
 import { debounce } from './utils';
 import Header from './components/Header.vue';
@@ -26,6 +27,7 @@ export default {
     onUnmounted(() => {
       window.removeEventListener('resize', debouncedHandleResize);
     });
+    gsap.to('body', 0, { css: { visibility: 'visible' } });
     const debouncedHandleResize = debounce(() => {
       dimensions.height = window.innerHeight;
       dimensions.width = window.innerWidth;

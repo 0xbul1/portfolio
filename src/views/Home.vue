@@ -29,13 +29,11 @@ export default {
       animationComplete.value = true;
     };
     onMounted(() => {
-      completeAnimation();
+      homeAnimation(completeAnimation);
     });
-
     watch(
       () => props.dimensions,
       () => {
-        homeAnimation(completeAnimation);
         const vh = props.dimensions.height * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       },
