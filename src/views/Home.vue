@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { ref, watch, toRef, onMounted } from 'vue';
+import { ref, watch, onMounted } from 'vue';
 import { homeAnimation } from '../animations';
 import IntroOverlay from '../components/IntroOverlay.vue';
 import Banner from '../components/Banner.vue';
