@@ -51,6 +51,7 @@ export default {
             closeMenu();
           }
         },
+        { immediate: true },
       );
     });
 
