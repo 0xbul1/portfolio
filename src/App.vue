@@ -7,10 +7,11 @@
 </template>
 <script>
 import { gsap } from 'gsap';
-import { onMounted, onUnmounted, reactive, ref } from 'vue';
+import { onMounted, onUnmounted, reactive } from 'vue';
 import { debounce } from './utils';
 import Header from './components/Header.vue';
 import Navigation from './components/Navigation.vue';
+
 export default {
   components: {
     Header,
@@ -21,12 +22,15 @@ export default {
       height: window.innerHeight,
       width: window.innerWidth,
     });
+
     onMounted(() => {
       window.addEventListener('resize', debouncedHandleResize);
     });
+
     onUnmounted(() => {
       window.removeEventListener('resize', debouncedHandleResize);
     });
+
     gsap.to('body', 0, { css: { visibility: 'visible' } });
     const debouncedHandleResize = debounce(() => {
       dimensions.height = window.innerHeight;

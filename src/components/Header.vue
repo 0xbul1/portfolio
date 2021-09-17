@@ -23,9 +23,10 @@
 </template>
 
 <script>
-import { reactive, watch, toRef } from 'vue';
+import { reactive, watch, onMounted } from 'vue';
 import { openMenu, closeMenu } from '../animations';
 import UpArrow from '../assets/up-arrow-circle.svg';
+
 export default {
   name: 'Header',
   components: {
@@ -40,16 +41,19 @@ export default {
     const menuState = reactive({
       menuOpened: false,
     });
-    watch(
-      () => menuState.menuOpened,
-      (status) => {
-        if (status === true) {
-          openMenu(props.dimensions.width);
-        } else {
-          closeMenu();
-        }
-      },
-    );
+    onMounted(() => {
+      watch(
+        () => menuState.menuOpened,
+        (status) => {
+          if (status === true) {
+            openMenu(props.dimensions.width);
+          } else {
+            closeMenu();
+          }
+        },
+      );
+    });
+
     return {
       menuState,
     };

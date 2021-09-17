@@ -28,17 +28,20 @@ export default {
     const completeAnimation = () => {
       animationComplete.value = true;
     };
+
     onMounted(() => {
       homeAnimation(completeAnimation);
     });
+
     watch(
       () => props.dimensions,
       () => {
         const vh = props.dimensions.height * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       },
-      { deep: true, immediate: true },
+      { deep: true },
     );
+
     return {
       animationComplete,
     };
