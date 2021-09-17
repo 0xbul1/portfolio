@@ -37,4 +37,8 @@ const router = createRouter({
   routes,
 });
 
+export function setupRouter(app) {
+  app.use(router);
+}
+
 export default router;

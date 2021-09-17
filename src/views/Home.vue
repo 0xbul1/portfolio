@@ -37,7 +37,7 @@ export default {
         const vh = props.dimensions.height * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       },
-      { deep: true },
+      { deep: true, immediate: true },
     );
     return {
       animationComplete,
