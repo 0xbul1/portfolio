@@ -2,48 +2,33 @@
   <nav>
     <div class="container">
       <div class="nav-columns">
-        <div class="nav-column">
+        <!-- <div class="nav-column">
           <div class="nav-label">Menu</div>
           <ul class="nav-links">
             <li>
               <a to="/case-studies" exact> Case Studies </a>
             </li>
             <li>
-              <a to="/approach" exact> Approach </a>
-            </li>
-            <li>
-              <a to="/services" exact> Services </a>
-            </li>
-            <li>
               <a to="/about-us" exact> About us </a>
             </li>
           </ul>
-        </div>
+        </div> -->
         <div class="nav-column">
-          <div class="nav-label">Contact</div>
+          <div class="nav-label">Contact me</div>
+          <div class="nav-infos">
+            <ul class="nav-info">
+              <li class="nav-info-label">Phone</li>
+              <li>
+                <a :href="`tel:${phone}`">{{ phone }}</a>
+              </li>
+            </ul>
+          </div>
           <div class="nav-infos">
             <ul class="nav-info">
               <li class="nav-info-label">Email</li>
               <li>
-                <a to="/contact" exact> Get in touch with us </a>
+                <a :href="`mailto:${email}`">{{ email }}</a>
               </li>
-              <li>
-                <a to="/audit" exact> Get a free audit </a>
-              </li>
-            </ul>
-            <ul class="nav-info">
-              <li class="nav-info-label">Headquarter</li>
-              <li>Route du Jura 49</li>
-              <li>1700 Fribourg</li>
-              <li>Switzerland</li>
-            </ul>
-            <ul class="nav-info">
-              <li class="nav-info-label">Phone</li>
-              <li>+41 (0) 79 510 28 70</li>
-            </ul>
-            <ul class="nav-info">
-              <li class="nav-info-label">Legal</li>
-              <li>Privacy & Cookies</li>
             </ul>
           </div>
         </div>
@@ -53,8 +38,15 @@
 </template>
 
 <script>
+import { VITE_APP_CONFIG } from '../config';
 export default {
   name: 'Navigation',
+  setup() {
+    return {
+      email: VITE_APP_CONFIG.email,
+      phone: VITE_APP_CONFIG.phone,
+    };
+  },
 };
 </script>
 

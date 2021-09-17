@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row v-center space-between">
         <div class="logo">
-          <a to="/" exact> AGENCY </a>
+          <a to="/" exact> {{ logoName }} </a>
         </div>
         <div class="nav-toggle">
           <div class="hamburger-menu" @click="menuState.menuOpened = true">
@@ -26,6 +26,7 @@
 import { reactive, watch, onMounted } from 'vue';
 import { openMenu, closeMenu } from '../animations';
 import UpArrow from '../assets/up-arrow-circle.svg';
+import { VITE_APP_CONFIG } from '../config';
 
 export default {
   name: 'Header',
@@ -57,6 +58,7 @@ export default {
 
     return {
       menuState,
+      logoName: VITE_APP_CONFIG.logoName,
     };
   },
 };

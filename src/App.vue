@@ -11,6 +11,7 @@ import { onMounted, onUnmounted, reactive } from 'vue';
 import { debounce } from './utils';
 import Header from './components/Header.vue';
 import Navigation from './components/Navigation.vue';
+import { VITE_APP_CONFIG } from './config';
 
 export default {
   components: {
@@ -18,6 +19,7 @@ export default {
     Navigation,
   },
   setup() {
+    document.title = VITE_APP_CONFIG.SiteName;
     const dimensions = reactive({
       height: window.innerHeight,
       width: window.innerWidth,

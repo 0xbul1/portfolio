@@ -11,5 +11,8 @@ export default defineConfig({
         additionalData: '@import "./src/styles/variables";@import "./src/styles/breakpoints";',
       }
     }
+  },
+  server: {
+    host: true
   }
 })

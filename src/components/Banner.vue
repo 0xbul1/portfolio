@@ -5,11 +5,11 @@
         <h2>
           <div class="line">
             <!-- <span>Creating unique brands is</span> -->
-            <span>I don't have to, but I have to</span>
+            <span>{{ line1Desc }}</span>
           </div>
           <div class="line">
             <!-- <span>what we do.</span> -->
-            <span>Sorry, I'm mjj ：）</span>
+            <span>{{ line2Desc }}</span>
           </div>
         </h2>
         <div class="btn-row">
@@ -22,11 +22,18 @@
 
 <script>
 import RightArrow from '../assets/arrow-right.svg';
+import { VITE_APP_CONFIG } from '../config';
 
 export default {
   name: 'Banner',
   components: {
     RightArrow,
+  },
+  setup() {
+    return {
+      line1Desc: VITE_APP_CONFIG.line1Desc,
+      line2Desc: VITE_APP_CONFIG.line2Desc,
+    };
   },
 };
 </script>

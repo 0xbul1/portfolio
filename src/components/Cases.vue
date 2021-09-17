@@ -3,14 +3,14 @@
     <div class="container-fluid">
       <div class="cases-navigation">
         <div class="cases-arrow prev disabled">
-          <CasesPrev />
+          <!-- <CasesPrev /> -->
         </div>
         <div class="cases-arrow next">
-          <CasesNext />
+          <!-- <CasesNext /> -->
         </div>
       </div>
       <div class="row">
-        <div class="case" v-for="caseItem in caseStudies" :key="caseItem.id">
+        <div class="case" v-for="caseItem in projectDesc" :key="caseItem.id">
           <div class="case-details">
             <span>{{ caseItem.subtitle }}</span>
             <h2>{{ caseItem.title }}</h2>
@@ -27,6 +27,7 @@
 <script>
 import CasesPrev from '../assets/arrow-left.svg';
 import CasesNext from '../assets/arrow-right.svg';
+import { VITE_APP_CONFIG } from '../config';
 export default {
   name: 'Cases',
   components: {
@@ -34,31 +35,11 @@ export default {
     CasesNext,
   },
   setup() {
-    const caseStudies = [
-      {
-        id: 1,
-        subtitle: 'Curology',
-        title: 'A custom formula for your skin’s unique needs',
-        img: 'img1',
-      },
-      {
-        id: 2,
-        subtitle: 'Yourspace',
-        title: 'Open space floor plans for you next venture',
-        img: 'img2',
-      },
-      {
-        id: 3,
-        subtitle: 'Lumin',
-        title: 'For your best look ever',
-        img: 'img3',
-      },
-    ];
     const dynamicImport = (name) => {
-      return new URL(`../assets/${name}.png`, import.meta.url).href;
+      return new URL(`../assets/${name}.jpeg`, import.meta.url).href;
     };
     return {
-      caseStudies,
+      projectDesc: VITE_APP_CONFIG.projectDesc,
       dynamicImport,
     };
   },
@@ -83,7 +64,7 @@ export default {
       display: none;
     }
     .cases-arrow {
-      background: rgba(0, 0, 0, 0.4);
+      // background: rgba(0, 0, 0, 0.4);
       height: 72px;
       width: 72px;
       border-radius: 100%;
@@ -110,7 +91,7 @@ export default {
       cursor: pointer;
       &:hover {
         .case-image {
-          opacity: 0.4;
+          opacity: 0.8;
         }
       }
       .case-details {
@@ -168,7 +149,7 @@ export default {
         height: 100%;
         overflow: hidden;
         position: absolute;
-        opacity: 0.65;
+        opacity: 0.9;
         transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
         img {
           height: 100%;
