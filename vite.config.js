@@ -12,6 +12,7 @@ export default defineConfig({
       }
     }
   },
+  // 开启本地测试
   server: {
     host: true
   }

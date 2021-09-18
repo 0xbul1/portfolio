@@ -2,32 +2,19 @@
   <nav>
     <div class="container">
       <div class="nav-columns">
-        <!-- <div class="nav-column">
-          <div class="nav-label">Menu</div>
-          <ul class="nav-links">
-            <li>
-              <a to="/case-studies" exact> Case Studies </a>
-            </li>
-            <li>
-              <a to="/about-us" exact> About us </a>
-            </li>
-          </ul>
-        </div> -->
         <div class="nav-column">
-          <div class="nav-label">Contact me</div>
-          <div class="nav-infos">
-            <ul class="nav-info">
-              <li class="nav-info-label">Phone</li>
-              <li>
-                <a :href="`tel:${phone}`">{{ phone }}</a>
-              </li>
-            </ul>
-          </div>
+          <div class="nav-label">Contact</div>
           <div class="nav-infos">
             <ul class="nav-info">
               <li class="nav-info-label">Email</li>
               <li>
                 <a :href="`mailto:${email}`">{{ email }}</a>
+              </li>
+            </ul>
+            <ul class="nav-info">
+              <li class="nav-info-label">Phone</li>
+              <li>
+                <a :href="`tel:${phone}`">{{ phone }}</a>
               </li>
             </ul>
           </div>
@@ -36,7 +23,6 @@
     </div>
   </nav>
 </template>
-
 <script>
 import { VITE_APP_CONFIG } from '../config';
 export default {
@@ -125,7 +111,6 @@ nav {
         .nav-info {
           padding: 0;
           width: 50%;
-          &:nth-child(2),
           &:nth-child(3) {
             @include media('<=654px') {
               display: none;

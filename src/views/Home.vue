@@ -34,12 +34,11 @@ export default {
     });
 
     watch(
-      () => props.dimensions,
+      () => props.dimensions.width,
       () => {
         const vh = props.dimensions.height * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       },
-      { deep: true },
     );
 
     return {
