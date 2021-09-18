@@ -44,7 +44,7 @@ nav {
   height: 100%;
   z-index: 1;
   display: none;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   background: $yellow;
   a {
