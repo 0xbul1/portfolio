@@ -2,8 +2,8 @@
 
 ## Online
 
-[preview1](https://hostloc-mjj.pages.dev/)
-[preview2](https://git.io/Jz8Ur)
+- [preview1](https://hostloc-mjj.pages.dev/)
+- [preview2](https://git.io/Jz8Ur)
 
 ## Preview
 
