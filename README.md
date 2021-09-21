@@ -1,8 +1,8 @@
 # Portfolio
 
-## Preview & Guide
+## Preview && Guide
 
-|   Project Preview  ||||
+|   web1  | web2| mobile1| mobile2|
 |   :--------:    | :-----:  |  :----:  | :----:  |
 | ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFEUU.png)   |   ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFMK1.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFN2d.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFwrt.png)  |
 
