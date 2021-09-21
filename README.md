@@ -1,5 +1,7 @@
 # Portfolio
 
+Language: English | [中文简体](README_CN.md)
+
 ## Online
 
 - [preview1](https://hostloc-mjj.pages.dev/)
@@ -32,6 +34,6 @@
 
 ## Resources
 
-- [aliyun](https://www.aliyundrive.com/s/s1KNJQNoHWv)
+- [aliyundrive](https://www.aliyundrive.com/s/s1KNJQNoHWv)
 
 - baiduyun waiting to be perfect...
