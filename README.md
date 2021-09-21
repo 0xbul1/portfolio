@@ -1,16 +1,16 @@
 # Portfolio
 
-## Preview && Guide
+## Preview
 
 |   web1  | web2| mobile1| mobile2|
 |   :--------:    | :-----:  |  :----:  | :----:  |
-| ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFEUU.png)   |   ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFMK1.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFN2d.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFwrt.png)  |
+| ![web1](https://z3.ax1x.com/2021/09/21/4YFEUU.png)   |   ![web2](https://z3.ax1x.com/2021/09/21/4YFMK1.png)  |![mobile1](https://z3.ax1x.com/2021/09/21/4YFN2d.png)  |![mobile2](https://z3.ax1x.com/2021/09/21/4YFwrt.png)  |
 
 
-
-|  Deploy Guide  ||||
+## Guide
+|  step1  |step2|step3|step4|
 |   :--------:    | :-----:  |  :----:  | :----:  |
-| ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFDVf.png)   |   ![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YF6Pg.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YF2xs.png)  |![cmd-markdown-logo](https://z3.ax1x.com/2021/09/21/4YFfrq.png)  |
+| ![step1](https://z3.ax1x.com/2021/09/21/4YFDVf.png)   |   ![step2](https://z3.ax1x.com/2021/09/21/4YF6Pg.png)  |![step3](https://z3.ax1x.com/2021/09/21/4YF2xs.png)  |![step4](https://z3.ax1x.com/2021/09/21/4YFfrq.png)  |
 
 
 ## Thanks & Inspired
