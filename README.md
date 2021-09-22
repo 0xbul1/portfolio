@@ -33,6 +33,6 @@ Language: English | [中文简体](README_CN.md)
 
 ## Resources
 
-- [aliyundrive](https://www.aliyundrive.com/s/s1KNJQNoHWv)
+- [aliyundrive](https://www.aliyundrive.com/s/8qJ3wmG36DU)
 
 - [baiduyun:rcpv](https://pan.baidu.com/s/1f69KRekWA0NVc841wl0Kxw)

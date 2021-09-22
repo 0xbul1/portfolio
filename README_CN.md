@@ -33,6 +33,6 @@ Language: 中文简体 | [English](README.md)
 
 ## 资源
 
-- [阿里云盘](https://www.aliyundrive.com/s/s1KNJQNoHWv)
+- [阿里云盘](https://www.aliyundrive.com/s/8qJ3wmG36DU)
 
 - [百度云提取码:rcpv](https://pan.baidu.com/s/1f69KRekWA0NVc841wl0Kxw)
