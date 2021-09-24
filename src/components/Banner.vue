@@ -13,7 +13,9 @@
           </div>
         </h2>
         <div class="btn-row">
-          <a href="/"> More about me <RightArrow /> </a>
+          <a href="https://github.com/0xbul1" target="_blank">
+            More about me <RightArrow />
+          </a>
         </div>
       </div>
     </div>
