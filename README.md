@@ -2,16 +2,24 @@
 
 Language: English | [中文简体](README_CN.md)
 
-## Online
+## Online Preview
 
 - [preview1](https://hostloc-mjj.pages.dev/)
 - [preview2](https://git.io/Jz8Ur)
 
-## Preview
+## Screenshots
 
-|                        web1                        |                        web2                        |                        mobile1                        |                        mobile2                        |
-| :------------------------------------------------: | :------------------------------------------------: | :---------------------------------------------------: | :---------------------------------------------------: |
-| ![web1](https://z3.ax1x.com/2021/09/21/4YFEUU.png) | ![web2](https://z3.ax1x.com/2021/09/21/4YFMK1.png) | ![mobile1](https://z3.ax1x.com/2021/09/21/4YFN2d.png) | ![mobile2](https://z3.ax1x.com/2021/09/21/4YFwrt.png) |
+| web1                        | mobile1                        |
+| --------------------------- | ------------------------------ |
+| ![](./screenshots/web1.jpg) | ![](./screenshots/mobile1.png) |
+
+| web2                        | mobile2                        |
+| --------------------------- | ------------------------------ |
+| ![](./screenshots/web2.jpg) | ![](./screenshots/mobile1.png) |
+
+| web                        | mobile                        |
+| -------------------------- | ----------------------------- |
+| ![](./screenshots/web.gif) | ![](./screenshots/mobile.gif) |
 
 ## Guide
 
