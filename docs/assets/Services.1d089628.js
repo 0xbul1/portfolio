@@ -1,0 +1,1 @@
+import{c as s,o as e,f as a}from"./vendor.9a5574c9.js";const r={name:"Services"},c={class:"page"},i=[a("div",{class:"container"},[a("div",{class:"row"},[a("h3",null,"This is the services page")])],-1)];r.render=function(a,r,n,o,t,d){return e(),s("div",c,i)};export{r as default};

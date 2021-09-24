@@ -1,0 +1,1 @@
+import{c as a,o as s,f as r}from"./vendor.9a5574c9.js";const e={name:"Approach"},o={class:"page"},c=[r("div",{class:"container"},[r("div",{class:"row"},[r("h3",null,"This is the approach page")])],-1)];e.render=function(r,e,n,i,p,t){return s(),a("div",o,c)};export{e as default};
