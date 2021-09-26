@@ -15,7 +15,7 @@ Language: 中文简体 | [English](README.md)
 
 | web2                        | mobile2                        |
 | --------------------------- | ------------------------------ |
-| ![](./screenshots/web2.jpg) | ![](./screenshots/mobile1.png) |
+| ![](./screenshots/web2.jpg) | ![](./screenshots/mobile2.png) |
 
 | web                        | mobile                        |
 | -------------------------- | ----------------------------- |
